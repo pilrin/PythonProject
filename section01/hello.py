@@ -1,2 +1,2 @@
 print("Hello Python!)
-print('comz')
+print('comzㅇ')
