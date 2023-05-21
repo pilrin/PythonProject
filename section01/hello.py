@@ -1,2 +1,1 @@
-print("Hello Python!)
-print('comzㅇ')
+print('Hello Python!')
