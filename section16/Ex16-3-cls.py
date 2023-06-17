@@ -15,13 +15,17 @@ class Bag:
     def __init__(self):
         Bag.count += 1
 
-    @classmethod
+    @classmethod  # 데코레이터
     def sell(cls):
         cls.count -= 1
 
     @classmethod
     def remain_bag(cls):
         return cls.count
+
+    @staticmethod
+    def slogan():
+        print('명품 주인을 찾습니다.')
 
 #실행코드
 print('현재 가방: {}개'.format(Bag.remain_bag()))
