@@ -39,13 +39,13 @@ def download_images(keyword, num_images=10, output_dir='images'):
 
     #검색어 입력
     search_bar = driver.find_element(By.NAME, 'q')
-    search_bar.send_keys(keyword)   #키워드 입력
-    search_bar.send_keys(Keys.RETURN)   #엔터입력
+    search_bar.send_keys(keyword)   # 키워드 입력
+    search_bar.send_keys(Keys.RETURN)   # 엔터 입력
 
-    #페이지 로딩 대기
+    # 페이지 로딩 대기
     time.sleep(2)
 
-    #출력 디렉토리 생성
+    # 출력 디렉토리 생성
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -65,7 +65,7 @@ def download_images(keyword, num_images=10, output_dir='images'):
                 )
             )
 
-            #이미지 URL 가져오기
+            # 이미지 URL 가져오기
             image_url = image.get_attribute('src')
 
             if image_url.startswith("data:"):
@@ -81,8 +81,9 @@ def download_images(keyword, num_images=10, output_dir='images'):
             print(f"Error downloading image {index}: {e}")
             traceback.print_exc()
 
-        #드라이버 종료
+        # 드라이버 종료
     driver.quit()
+# 실행 코드
 keyword = "cute cat"
 num_images = 10
 output_dir = "images"
