@@ -20,12 +20,19 @@ class LinearList():
     #데이터 삽입
     def insert_data(self, position, data):
         linear = self.linear
+        '''
+        linear = [3,5,4,2,6]
+        position = 3
+        data = 99
+        len(linear) -> 5    
+        linearSize = 6  
+        '''
 
-        if position < 0 or position > len(linear):
+        if position < 0 or position > len(linear):   #유효성 검사(사전에 잘못된 데이터를 막음)
             print('데이터를 삽입할 범위를 벗어났습니다.')
             return
 
-        linear.append(None)
+        linear.append(None) #linear = [3,5,4,2,6,None]
         linearSize = len(linear)
 
         for i in range(linearSize - 1, position, -1):
@@ -36,6 +43,12 @@ class LinearList():
     #데이터 삭제
     def delete_data(self, position):
         linear = self.linear
+        '''
+        linear = [3,5,99,2,6]
+        position = 2
+        len(linear) -> 6
+        linearSinze = 6
+        '''
 
         if position < 0 or position > len(linear):
             print('데이터를 삭제할 범위를 벗어났습니다.')
