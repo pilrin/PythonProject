@@ -1,10 +1,11 @@
 '''
+파일명: Ex25-1-sqlite-ddl.py
+
 SQLite
     오픈 소스 관계형 데이터베이스
-    서버가 필요하지 않으면, 파일 기반 데이터베이스로 동작한다.
+    서버가 필요하지 않으며, 파일 기반 데이터베이스로 동작한다.
     로컬 시스템에서 바로 사용할 수 있다.
 '''
-
 import sqlite3
 db_file = 'hr.db'
 
@@ -12,7 +13,7 @@ conn = sqlite3.connect(db_file)
 cur = conn.cursor()
 
 cur.execute('''
-CREATE TABLE employees(
+CREATE TABLE employees (
     employee_id INTEGER PRIMARY KEY,
     first_name TEXT,
     last_name TEXT,

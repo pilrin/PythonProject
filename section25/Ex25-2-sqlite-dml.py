@@ -8,7 +8,7 @@ sql = "INSERT INTO employees" \
       " (first_name, last_name," \
       " email, hire_data, job_id, salary, department_id) " \
       "VALUES (?,?,?,?,?,?,?)"
-cur.execute(sql,('John','Doe','johndoe1@exmple.com,'
+cur.execute(sql,('John' , 'Doe','johndoe1@exmple.com,'
                               '2023-07-15','IT_PROG', 5000, 90))
 conn.commit()
 cur.close()
